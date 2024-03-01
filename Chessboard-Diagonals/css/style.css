@@ -1,0 +1,36 @@
+#board {
+    border: 0.2rem solid #000;
+    width: min-content;
+}
+
+#board > div {
+    display: flex;
+}
+
+#board > div > div {
+    width: 3rem;
+    height: 3rem;
+}
+
+#board > div:nth-child(2n) > div:nth-child(2n+1),
+#board > div:nth-child(2n+1) > div:nth-child(2n) {
+    background-color: #000;
+}
+
+#board > div > div.highlighted {
+    background-color: darkred !important;
+}
+
+#clear-highlights-btn {
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: darkred;
+    border: 5px solid darkred;
+    border-radius: 5px;
+}
+
+#clear-highlights-btn:hover{
+    scale: 1.1;
+    transition: scale 1s ease-in;
+}
